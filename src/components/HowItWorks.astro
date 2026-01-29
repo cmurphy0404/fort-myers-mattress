@@ -1,0 +1,59 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'Book a Time',
+    description: 'Schedule an appointment online or call us. Pick a time that works for your schedule.',
+    icon: 'calendar',
+  },
+  {
+    number: '2',
+    title: 'Try Options & Get Guidance',
+    description: 'Test different mattresses with personalized recommendations based on your sleep style.',
+    icon: 'bed',
+  },
+  {
+    number: '3',
+    title: 'Take It Home',
+    description: 'Choose pickup or delivery. We make getting your new mattress easy.',
+    icon: 'home',
+  },
+];
+---
+
+<section class="section-padding bg-gray-50">
+  <div class="container-wide">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        How It Works
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Three simple steps to your perfect mattress.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Connection Line (Desktop) -->
+      <div class="hidden md:block absolute top-24 left-1/6 right-1/6 h-0.5 bg-blue-200"></div>
+
+      <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+        {steps.map((step, index) => (
+          <div class="relative text-center">
+            <!-- Step Number -->
+            <div class="relative z-10 w-16 h-16 mx-auto mb-6 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
+              {step.number}
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
+            <p class="text-gray-600">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/book" class="btn-primary text-lg px-8 py-4">
+        Book Your Appointment
+      </a>
+    </div>
+  </div>
+</section>

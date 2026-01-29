@@ -1,0 +1,8 @@
+# robots.txt for Fort Myers Mattress By Appointment
+# https://fortmyersmattress.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fortmyersmattress.com/sitemap-index.xml

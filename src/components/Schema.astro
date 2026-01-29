@@ -1,0 +1,54 @@
+---
+import { siteConfig } from '../config';
+
+const socialLinks = Object.values(siteConfig.socials).filter(Boolean);
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${siteConfig.siteUrl}/#business`,
+  name: siteConfig.businessName,
+  description: 'Private, by-appointment mattress shopping in Fort Myers, Florida. One-on-one consultations with straightforward pricing.',
+  url: siteConfig.siteUrl,
+  telephone: siteConfig.phone,
+  email: siteConfig.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: siteConfig.address.street,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.state,
+    postalCode: siteConfig.address.zip,
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 26.5975,
+    longitude: -81.871,
+  },
+  areaServed: siteConfig.areaServed.map((area) => ({
+    '@type': 'City',
+    name: area,
+  })),
+  priceRange: '$$',
+  image: `${siteConfig.siteUrl}/og-image.svg`,
+  sameAs: socialLinks.length > 0 ? socialLinks : undefined,
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    description: 'By Appointment Only',
+  },
+};
+
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteConfig.siteUrl}/#website`,
+  url: siteConfig.siteUrl,
+  name: siteConfig.businessName,
+  publisher: {
+    '@id': `${siteConfig.siteUrl}/#business`,
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />

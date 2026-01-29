@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts - Include in your HTML head */
+/* <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet"> */
+
+@layer base {
+  :root {
+    /* MBA Brand Colors */
+    --color-brand-primary: #8B2635;
+    --color-brand-secondary: #CC403F;
+    --color-brand-accent: #E97C7F;
+    --color-brand-dark: #5C1A23;
+    
+    /* Neutrals */
+    --color-bg-warm: #FAF9F7;
+    --color-text-primary: #2D2926;
+    --color-text-secondary: #6B6560;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-warm text-slate-dark antialiased;
+    font-feature-settings: 'ss01' 1, 'cv01' 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg 
+           hover:bg-brand-700 transition-all duration-200 
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2
+           shadow-soft hover:shadow-medium;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-brand-600 font-semibold rounded-lg 
+           border-2 border-brand-600 
+           hover:bg-brand-600 hover:text-white transition-all duration-200 
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+  }
+
+  .btn-call {
+    @apply inline-flex items-center justify-center px-4 py-2 bg-cta-call text-white font-medium rounded-lg 
+           hover:bg-cta-call-hover transition-colors duration-200
+           shadow-soft hover:shadow-medium;
+  }
+
+  .btn-text {
+    @apply inline-flex items-center justify-center px-4 py-2 bg-brand-600 text-white font-medium rounded-lg 
+           hover:bg-brand-700 transition-colors duration-200;
+  }
+
+  /* Accent buttons using coral */
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent-coral text-white font-semibold rounded-lg 
+           hover:bg-brand-500 transition-all duration-200;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Brand gradient text */
+  .text-brand-gradient {
+    @apply bg-clip-text text-transparent bg-brand-gradient;
+  }
+
+  /* Warm section background */
+  .bg-warm-section {
+    @apply bg-gradient-to-br from-neutral-warm to-neutral-stone;
+  }
+}
+

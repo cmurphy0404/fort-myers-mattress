@@ -1,0 +1,100 @@
+---
+import { siteConfig } from '../config';
+
+const faqs = [
+  {
+    question: 'How do appointments work?',
+    answer: `Simply call us at ${siteConfig.phone} or fill out our online form to request a time. We'll confirm your appointment and you'll have the showroom to yourself for a private, pressure-free shopping experience.`,
+  },
+  {
+    question: 'How long does an appointment take?',
+    answer: 'Most appointments last 30–60 minutes, but there's no rush. Take as much time as you need to find the right mattress.',
+  },
+  {
+    question: 'Do you offer delivery?',
+    answer: 'Yes, we offer local delivery options in the Fort Myers and Southwest Florida area. Ask about delivery during your appointment.',
+  },
+  {
+    question: 'Can I pick up my mattress the same day?',
+    answer: 'In many cases, yes! If we have your chosen mattress in stock, same-day pickup is often available. We'll let you know during your appointment.',
+  },
+  {
+    question: 'What payment methods do you accept?',
+    answer: 'We accept multiple payment options to make your purchase convenient. Ask us about what's currently available during your visit.',
+  },
+  {
+    question: 'Do you carry firm mattresses?',
+    answer: 'Yes! We carry a range of comfort levels from extra firm to plush soft, including options with cooling technology.',
+  },
+  {
+    question: 'What about soft or plush mattresses?',
+    answer: 'Absolutely. We have pillow-top, plush, and memory foam options perfect for those who prefer a softer sleeping surface.',
+  },
+  {
+    question: 'Do you have mattresses with cooling features?',
+    answer: 'Yes, we stock mattresses with gel-infused foam, breathable covers, and other cooling technologies—great for Florida's warm climate.',
+  },
+  {
+    question: 'What's your warranty and return policy?',
+    answer: 'Warranty coverage varies by manufacturer. We'll explain all warranty details during your appointment. Ask us for specifics on returns and exchanges.',
+  },
+  {
+    question: 'Do you carry adjustable bases?',
+    answer: 'Yes! We offer adjustable bases that pair perfectly with compatible mattresses. Great for reading, watching TV, or alleviating back pain.',
+  },
+  {
+    question: 'Where are you located?',
+    answer: `We're located at ${siteConfig.address.full}. Look for our showroom in the plaza. Free parking available.`,
+  },
+  {
+    question: 'Do I need an appointment to visit?',
+    answer: 'Yes, we operate by appointment only. This ensures you get personalized attention without crowds or pressure. Call or book online to schedule.',
+  },
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-narrow">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-lg text-gray-600">
+        Everything you need to know about shopping with us.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <details class="group bg-gray-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-gray-100 transition-colors">
+            <span class="font-semibold text-gray-900 pr-4">{faq.question}</span>
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center group-open:rotate-180 transition-transform">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6">
+            <p class="text-gray-600">{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 mb-4">Still have questions?</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`tel:${siteConfig.phoneRaw}`} class="btn-call">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Call Us
+        </a>
+        <a href="/book" class="btn-primary">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
