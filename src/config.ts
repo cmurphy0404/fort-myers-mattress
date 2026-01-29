@@ -35,9 +35,13 @@ export const siteConfig = {
   socials: {
     facebook: 'https://www.facebook.com/fortmyersmattressbyappointment',
     instagram: '', // UPDATE: e.g., 'https://instagram.com/fortmyersmattress'
-    google: '', // UPDATE: Google Business Profile URL
+    google: 'https://www.google.com/maps/place/Mattress+By+Appointment+-+Fort+Myers/@26.5838637,-81.8605498,17z/data=!4m8!3m7!1s0x88db40528b1e9b23:0x878fcd40ce3e12cf!8m2!3d26.5838637!4d-81.8579749!9m1!1b1!16s%2Fg%2F11c5kb3bft',
     yelp: '', // UPDATE: Yelp page URL
   },
+
+  // Google Business
+  googlePlaceId: '9765755009355902671',
+  googleReviewsLink: 'https://search.google.com/local/reviews?placeid=ChIJI5seiyxA3YgRzy4-zpz9j4c',
 
   // SEO
   siteUrl: 'https://fort-myers-mattress.netlify.app', // TODO: Update to custom domain when ready
