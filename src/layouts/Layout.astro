@@ -60,10 +60,20 @@ const { title, description, canonical, ogImage } = Astro.props;
     </noscript>
 
     <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://www.facebook.com" />
     <link rel="dns-prefetch" href="https://maps.google.com" />
     <link rel="dns-prefetch" href="https://static.elfsight.com" />
+
+    <!-- Google Analytics -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HKPS414DGD"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HKPS414DGD');
+    </script>
 
     <!-- Elfsight Widget -->
     <script src="https://static.elfsight.com/platform/platform.js" async></script>

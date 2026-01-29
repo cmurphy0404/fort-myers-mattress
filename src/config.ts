@@ -44,7 +44,7 @@ export const siteConfig = {
   googleReviewsLink: 'https://search.google.com/local/reviews?placeid=ChIJI5seiyxA3YgRzy4-zpz9j4c',
 
   // SEO
-  siteUrl: 'https://fort-myers-mattress.netlify.app', // TODO: Update to custom domain when ready
+  siteUrl: 'https://fortmyersmattressstore.com',
 
   // Google Maps
   googleMapsEmbed: 'https://maps.google.com/maps?q=2950+Winkler+Ave+%23601,+Fort+Myers,+FL+33916&t=&z=15&ie=UTF8&iwloc=&output=embed',
