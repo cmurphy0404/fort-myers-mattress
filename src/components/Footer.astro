@@ -93,9 +93,10 @@ const currentYear = new Date().getFullYear();
     <!-- Bottom Bar -->
     <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-800">
       <div class="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
-        <p class="text-gray-500 text-xs sm:text-sm text-center sm:text-left">
-          © {currentYear} {siteConfig.businessName}. All rights reserved.
-        </p>
+        <div class="text-gray-500 text-xs sm:text-sm text-center sm:text-left">
+          <p>© {currentYear} {siteConfig.businessName}. All rights reserved.</p>
+          <p class="mt-1">Powered by <a href="https://webaroo.us" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Webaroo</a></p>
+        </div>
         <p class="text-gray-500 text-xs sm:text-sm text-center sm:text-right">
           <a href={`tel:${siteConfig.phoneRaw}`} class="hover:text-white transition-colors">
             {siteConfig.phone}
