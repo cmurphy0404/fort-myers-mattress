@@ -1,0 +1,26 @@
+---
+const brands = [
+  { src: '/images/brand-1.webp', alt: 'Brand logo' },
+  { src: '/images/brand-2.webp', alt: 'Brand logo' },
+  { src: '/images/brand-3.webp', alt: 'Brand logo' },
+  { src: '/images/brand-4.webp', alt: 'Brand logo' },
+];
+---
+
+<section class="py-10 sm:py-14 bg-gray-100">
+  <div class="container-wide">
+    <div class="text-center mb-6 sm:mb-8">
+      <p class="text-sm sm:text-base font-semibold text-gray-600 uppercase tracking-wider">Trusted Brands We Carry</p>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+      {brands.map((brand) => (
+        <img
+          src={brand.src}
+          alt={brand.alt}
+          class="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+      ))}
+    </div>
+  </div>
+</section>
