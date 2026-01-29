@@ -43,6 +43,18 @@ const fullTitle = `${title} | ${siteConfig.businessName}`;
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={new URL(ogImage, siteConfig.siteUrl).href} />
 
-<!-- Geo Tags -->
+<!-- Geo Tags for Local SEO -->
 <meta name="geo.region" content="US-FL" />
 <meta name="geo.placename" content="Fort Myers" />
+<meta name="geo.position" content="26.5975;-81.871" />
+<meta name="ICBM" content="26.5975, -81.871" />
+
+<!-- Local Business Keywords -->
+<meta name="keywords" content="mattress store Fort Myers, mattress by appointment, mattress shop Cape Coral, mattress store Naples FL, mattress showroom Southwest Florida, buy mattress Fort Myers, mattress near me, memory foam mattress Fort Myers, hybrid mattress Cape Coral, pillow top mattress, adjustable base Fort Myers, mattress delivery Fort Myers, mattress store Bonita Springs, mattress Lehigh Acres, mattress Estero FL" />
+
+<!-- Additional Local SEO -->
+<meta name="author" content={siteConfig.businessName} />
+<meta name="revisit-after" content="7 days" />
+<meta name="distribution" content="local" />
+<meta name="coverage" content="Southwest Florida" />
+<meta name="target" content="Fort Myers, Cape Coral, Naples, Bonita Springs, Estero, Lehigh Acres, Southwest Florida" />

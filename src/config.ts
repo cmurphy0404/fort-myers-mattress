@@ -31,16 +31,16 @@ export const siteConfig = {
     ],
   },
 
-  // Social Media - UPDATE with actual links
+  // Social Media
   socials: {
-    facebook: '', // UPDATE: e.g., 'https://facebook.com/fortmyersmattress'
+    facebook: 'https://www.facebook.com/fortmyersmattressbyappointment',
     instagram: '', // UPDATE: e.g., 'https://instagram.com/fortmyersmattress'
     google: '', // UPDATE: Google Business Profile URL
     yelp: '', // UPDATE: Yelp page URL
   },
 
   // SEO
-  siteUrl: 'https://fortmyersmattress.com', // UPDATE: Replace with actual domain
+  siteUrl: 'https://fort-myers-mattress.netlify.app', // TODO: Update to custom domain when ready
 
   // Google Maps
   googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.123!2d-81.871!3d26.5975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDM1JzUxLjAiTiA4McKwNTInMTUuNiJX!5e0!3m2!1sen!2sus!4v1600000000000',

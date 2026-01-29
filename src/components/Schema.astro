@@ -3,12 +3,39 @@ import { siteConfig } from '../config';
 
 const socialLinks = Object.values(siteConfig.socials).filter(Boolean);
 
+// Extended area served - 75 mile radius from Fort Myers
+const extendedAreaServed = [
+  ...siteConfig.areaServed,
+  'Punta Gorda',
+  'Port Charlotte',
+  'Marco Island',
+  'Sanibel',
+  'Captiva',
+  'Immokalee',
+  'Ave Maria',
+  'Golden Gate',
+  'North Fort Myers',
+  'Pine Island',
+  'Labelle',
+  'Clewiston',
+  'Arcadia',
+  'Englewood',
+  'Venice',
+  'Sarasota',
+  'Bradenton',
+  'North Naples',
+  'Collier County',
+  'Lee County',
+  'Charlotte County',
+];
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'FurnitureStore'],
   '@id': `${siteConfig.siteUrl}/#business`,
   name: siteConfig.businessName,
-  description: 'Private, by-appointment mattress shopping in Fort Myers, Florida. One-on-one consultations with straightforward pricing.',
+  alternateName: 'Fort Myers Mattress',
+  description: 'Private, by-appointment mattress shopping in Fort Myers, Florida. Part of the Mattress by Appointment family. One-on-one consultations with straightforward warehouse-direct pricing on quality mattresses.',
   url: siteConfig.siteUrl,
   telephone: siteConfig.phone,
   email: siteConfig.email,
@@ -25,17 +52,45 @@ const localBusinessSchema = {
     latitude: 26.5975,
     longitude: -81.871,
   },
-  areaServed: siteConfig.areaServed.map((area) => ({
-    '@type': 'City',
-    name: area,
-  })),
+  areaServed: [
+    // 75 mile radius GeoCircle
+    {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 26.5975,
+        longitude: -81.871,
+      },
+      geoRadius: '120700', // 75 miles in meters
+    },
+    // Named cities
+    ...extendedAreaServed.map((area) => ({
+      '@type': 'City',
+      name: area,
+      addressRegion: 'FL',
+      addressCountry: 'US',
+    })),
+  ],
   priceRange: '$$',
-  image: `${siteConfig.siteUrl}/og-image.svg`,
+  image: `${siteConfig.siteUrl}/images/MBA-MainHorizontalLogo-Red_Gray.png`,
+  logo: `${siteConfig.siteUrl}/images/MBA-MainHorizontalLogo-Red_Gray.png`,
   sameAs: socialLinks.length > 0 ? socialLinks : undefined,
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     description: 'By Appointment Only',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
   },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Mattresses',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Memory Foam Mattresses' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Hybrid Mattresses' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Pillow Top Mattresses' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Adjustable Bases' } },
+    ],
+  },
+  keywords: 'mattress store Fort Myers, mattress by appointment, mattress shop Cape Coral, mattress store Naples FL, mattress showroom Southwest Florida, buy mattress Fort Myers, mattress near me, memory foam mattress Fort Myers, hybrid mattress Cape Coral',
 };
 
 const webSiteSchema = {
