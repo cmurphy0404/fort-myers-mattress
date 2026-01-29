@@ -19,15 +19,48 @@ const { title, description, canonical, ogImage } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Mobile Viewport - optimized for iOS and Android -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+
+    <!-- iOS Safari specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Fort Myers Mattress" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <!-- Android Chrome specific -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#8B2635" />
+    <meta name="msapplication-TileColor" content="#8B2635" />
+
+    <!-- Disable auto text sizing on mobile -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- Favicons and Touch Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.facebook.com" />
+
     <SEO title={title} description={description} canonical={canonical} ogImage={ogImage} />
     <Schema />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col no-horizontal-scroll">
     <Header />
     <main class="flex-1">
       <slot />
