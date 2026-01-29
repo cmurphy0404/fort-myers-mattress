@@ -23,41 +23,44 @@ const products = [
 ];
 ---
 
-<section class="section-padding bg-white">
+<section class="section-padding bg-white" aria-labelledby="products-heading">
   <div class="container-wide">
-    <div class="text-center mb-10 sm:mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-display">
+    <header class="text-center mb-8 sm:mb-10 md:mb-12">
+      <h2 id="products-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-display">
         What We Carry
       </h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0">
         A curated selection of quality sleep products.
       </p>
-    </div>
+    </header>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
       {products.map((product) => (
-        <div class="group cursor-pointer">
-          <div class="aspect-square overflow-hidden rounded-xl mb-4 bg-gray-100 shadow-sm group-hover:shadow-md transition-shadow duration-300 relative">
-             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"/>
+        <article class="group">
+          <div class="aspect-square overflow-hidden rounded-xl sm:rounded-2xl mb-3 sm:mb-4 bg-gray-100 shadow-sm group-hover:shadow-md transition-shadow duration-300 relative">
+             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10" aria-hidden="true"/>
              <img
               src={product.image}
-              alt={product.name}
-              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              alt={`${product.name} - Quality sleep products at Fort Myers Mattress`}
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
+              width="300"
+              height="300"
+              decoding="async"
             />
           </div>
-          <h3 class="text-lg sm:text-xl font-bold text-gray-900 text-center font-display">
+          <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 text-center font-display">
             {product.name}
           </h3>
-        </div>
+        </article>
       ))}
     </div>
-    
-    <div class="text-center mt-12">
-      <p class="text-gray-500 text-sm mb-6">
+
+    <div class="text-center mt-8 sm:mt-10 md:mt-12">
+      <p class="text-gray-500 text-sm sm:text-base mb-4 sm:mb-6 px-4 sm:px-0">
         Not sure what you need? We'll help you find the right fit during your appointment.
       </p>
-      <a href="/book" class="btn-primary">
+      <a href="/book" class="btn-primary touch-active">
         Schedule Your Visit
       </a>
     </div>

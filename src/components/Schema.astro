@@ -102,8 +102,62 @@ const webSiteSchema = {
   publisher: {
     '@id': `${siteConfig.siteUrl}/#business`,
   },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteConfig.siteUrl}/?s={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+// FAQ Schema for common questions
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do appointments work at Fort Myers Mattress?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Simply call us at ${siteConfig.phone} or fill out our online form to request a time. We'll confirm your appointment and you'll have the showroom to yourself for a private, pressure-free shopping experience.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much can I save at Fort Myers Mattress?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our customers typically save 50-80% off retail store prices. We keep costs low by operating by appointment only with minimal overhead.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer financing or payment plans?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes! We offer no credit needed payment plans with only $20 down. Ask us about financing options during your appointment.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer same day delivery?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, we offer same day delivery in the Fort Myers and Southwest Florida area. If we have your chosen mattress in stock, same-day pickup is often available too.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What brands do you carry?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We carry trusted brands including Tempur, Diamond, and other quality mattress manufacturers. We stock memory foam, hybrid, pillow-top, and adjustable bases.',
+      },
+    },
+  ],
 };
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

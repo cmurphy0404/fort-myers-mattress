@@ -1,24 +1,29 @@
 ---
 const brands = [
-  { src: '/images/brand-1.webp', alt: 'Brand logo' },
-  { src: '/images/brand-2.webp', alt: 'Brand logo' },
-  { src: '/images/brand-3.webp', alt: 'Brand logo' },
-  { src: '/images/brand-4.webp', alt: 'Brand logo' },
+  { src: '/images/brand-1.webp', alt: 'Mattress brand partner logo', name: 'Partner Brand' },
+  { src: '/images/brand-2.webp', alt: 'Mattress brand partner logo', name: 'Partner Brand' },
+  { src: '/images/brand-3.webp', alt: 'Tempur mattress brand logo', name: 'Tempur' },
+  { src: '/images/brand-4.webp', alt: 'Diamond mattress brand logo', name: 'Diamond' },
 ];
 ---
 
-<section class="py-10 sm:py-14 bg-gray-100">
+<section class="py-8 sm:py-10 md:py-14 bg-gray-100" aria-label="Trusted mattress brands we carry">
   <div class="container-wide">
-    <div class="text-center mb-6 sm:mb-8">
-      <p class="text-sm sm:text-base font-semibold text-gray-600 uppercase tracking-wider">Trusted Brands We Carry</p>
-    </div>
-    <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+    <h2 class="sr-only">Our Trusted Brand Partners</h2>
+    <p class="text-center text-xs sm:text-sm md:text-base font-semibold text-gray-600 uppercase tracking-wider mb-6 sm:mb-8">
+      Trusted Brands We Carry
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-14 lg:gap-20">
       {brands.map((brand) => (
         <img
           src={brand.src}
           alt={brand.alt}
-          class="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+          title={brand.name}
+          class="h-10 sm:h-12 md:h-16 lg:h-20 w-auto object-contain opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300"
           loading="lazy"
+          width="120"
+          height="60"
+          decoding="async"
         />
       ))}
     </div>
