@@ -45,16 +45,9 @@
     @apply font-display;
   }
 
-  /* Improve touch targets - minimum 44x44px as per Apple/Google guidelines */
-  a, button, input, select, textarea {
+  /* Form inputs should have good touch targets */
+  input, select, textarea {
     min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* Exception for inline links in text */
-  p a, li a, span a {
-    min-height: auto;
-    min-width: auto;
   }
 
   /* Prevent text selection on buttons for better mobile UX */
@@ -76,39 +69,63 @@
 }
 
 @layer components {
+  /* Primary button - main CTA */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg 
-           hover:bg-brand-700 transition-all duration-200 
+    @apply inline-flex items-center justify-center
+           px-5 py-2.5 sm:px-6 sm:py-3
+           bg-brand-600 text-white font-semibold rounded-xl
+           hover:bg-brand-700 active:bg-brand-800
+           transition-all duration-200
            focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2
-           shadow-soft hover:shadow-medium;
+           shadow-soft hover:shadow-medium
+           text-sm sm:text-base;
   }
 
+  /* Secondary button - outlined */
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-brand-600 font-semibold rounded-lg 
-           border-2 border-brand-600 
-           hover:bg-brand-600 hover:text-white transition-all duration-200 
-           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center
+           px-5 py-2.5 sm:px-6 sm:py-3
+           bg-white text-brand-600 font-semibold rounded-xl
+           border-2 border-brand-600
+           hover:bg-brand-600 hover:text-white active:bg-brand-700
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2
+           text-sm sm:text-base;
   }
 
+  /* Call button - green for phone */
   .btn-call {
-    @apply inline-flex items-center justify-center px-4 py-2 bg-cta-call text-white font-medium rounded-lg 
-           hover:bg-cta-call-hover transition-colors duration-200
-           shadow-soft hover:shadow-medium;
+    @apply inline-flex items-center justify-center
+           px-3 py-2 sm:px-4 sm:py-2.5
+           bg-cta-call text-white font-medium rounded-xl
+           hover:bg-cta-call-hover active:opacity-90
+           transition-colors duration-200
+           shadow-soft hover:shadow-medium
+           text-sm;
   }
 
+  /* Text/SMS button */
   .btn-text {
-    @apply inline-flex items-center justify-center px-4 py-2 bg-brand-600 text-white font-medium rounded-lg 
-           hover:bg-brand-700 transition-colors duration-200;
+    @apply inline-flex items-center justify-center
+           px-3 py-2 sm:px-4 sm:py-2.5
+           bg-brand-600 text-white font-medium rounded-xl
+           hover:bg-brand-700 active:bg-brand-800
+           transition-colors duration-200
+           text-sm;
   }
 
   /* Accent buttons using coral */
   .btn-accent {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-accent-coral text-white font-semibold rounded-lg 
-           hover:bg-brand-500 transition-all duration-200;
+    @apply inline-flex items-center justify-center
+           px-5 py-2.5 sm:px-6 sm:py-3
+           bg-accent-coral text-white font-semibold rounded-xl
+           hover:bg-brand-500 active:opacity-90
+           transition-all duration-200
+           text-sm sm:text-base;
   }
 
   .section-padding {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-10 sm:py-14 md:py-20 lg:py-24;
   }
 
   .container-narrow {
@@ -116,7 +133,7 @@
   }
 
   .container-wide {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-6xl mx-auto px-3 sm:px-6 lg:px-8;
   }
 
   /* Brand gradient text */

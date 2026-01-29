@@ -5,38 +5,38 @@ import { siteConfig } from '../config';
 <section class="relative bg-gradient-to-br from-blue-50 via-white to-gray-50 overflow-hidden">
   <!-- Background Pattern -->
   <div class="absolute inset-0 opacity-30">
-    <div class="absolute top-20 right-10 w-64 h-64 bg-blue-200 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 left-10 w-48 h-48 bg-blue-100 rounded-full blur-3xl"></div>
+    <div class="absolute top-20 right-10 w-48 sm:w-64 h-48 sm:h-64 bg-blue-200 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-32 sm:w-48 h-32 sm:h-48 bg-blue-100 rounded-full blur-3xl"></div>
   </div>
 
-  <div class="container-wide relative py-16 md:py-24 lg:py-32">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <div class="container-wide relative py-10 sm:py-16 md:py-24 lg:py-32">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       <!-- Content -->
       <div class="text-center lg:text-left">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
           Mattress Shopping<br />
           <span class="text-accent">— By Appointment</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+        <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
           Private, no-pressure appointments in Fort Myers. Call or book a time that works for you.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <a href="/book" class="btn-primary text-lg px-8 py-4">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+          <a href="/book" class="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto touch-active">
             Book an Appointment
           </a>
-          <a href={`tel:${siteConfig.phoneRaw}`} class="btn-secondary text-lg px-8 py-4">
+          <a href={`tel:${siteConfig.phoneRaw}`} class="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto touch-active">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
             {siteConfig.phone}
           </a>
         </div>
-        <div class="mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-          <p class="text-sm text-gray-500">
+        <div class="mt-5 sm:mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3">
+          <p class="text-xs sm:text-sm text-gray-500">
             Serving Fort Myers, Cape Coral & Southwest Florida
           </p>
           <span class="hidden sm:inline text-gray-300">|</span>
-          <p class="text-sm text-gray-500">
+          <p class="text-xs sm:text-sm text-gray-500">
             Part of the <span class="font-semibold">Mattress by Appointment</span> family
           </p>
         </div>

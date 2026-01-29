@@ -5,8 +5,8 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-gray-900 text-white safe-area-bottom">
-  <div class="container-wide py-12 md:py-16">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+  <div class="container-wide py-10 sm:py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
       <!-- Brand & Contact -->
       <div>
         <div class="mb-4">
@@ -34,15 +34,15 @@ const currentYear = new Date().getFullYear();
             Follow us on Facebook
           </a>
         )}
-        <div class="flex gap-3">
-          <a href={`tel:${siteConfig.phoneRaw}`} class="btn-call text-sm">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="flex flex-wrap gap-2 sm:gap-3">
+          <a href={`tel:${siteConfig.phoneRaw}`} class="btn-call text-sm touch-active">
+            <svg class="w-4 h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
             Call Us
           </a>
-          <a href={`sms:${siteConfig.phoneRaw}`} class="btn-text text-sm">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <a href={`sms:${siteConfig.phoneRaw}`} class="btn-text text-sm touch-active">
+            <svg class="w-4 h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
             </svg>
             Text Us
@@ -83,8 +83,8 @@ const currentYear = new Date().getFullYear();
           <a href="/book" class="text-gray-400 hover:text-white text-sm transition-colors">Book Appointment</a>
           <a href="/about" class="text-gray-400 hover:text-white text-sm transition-colors">About & FAQ</a>
         </nav>
-        <div class="mt-6">
-          <a href="/book" class="btn-primary text-sm">
+        <div class="mt-5 sm:mt-6">
+          <a href="/book" class="btn-primary text-sm w-full sm:w-auto touch-active">
             Book Your Appointment
           </a>
         </div>
@@ -92,12 +92,12 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <!-- Bottom Bar -->
-    <div class="mt-12 pt-8 border-t border-gray-800">
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-gray-500 text-sm">
+    <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-800">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+        <p class="text-gray-500 text-xs sm:text-sm text-center sm:text-left">
           © {currentYear} {siteConfig.businessName}. All rights reserved.
         </p>
-        <p class="text-gray-500 text-sm">
+        <p class="text-gray-500 text-xs sm:text-sm text-center sm:text-right">
           <a href={`tel:${siteConfig.phoneRaw}`} class="hover:text-white transition-colors">
             {siteConfig.phone}
           </a>

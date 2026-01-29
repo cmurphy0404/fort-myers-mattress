@@ -10,16 +10,16 @@ const products = [
 
 <section class="section-padding bg-white">
   <div class="container-wide">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
       <!-- Content -->
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
           What We Carry
         </h2>
-        <p class="text-lg text-gray-600 mb-8">
+        <p class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
           We stock a curated selection of quality mattresses to match every sleep preference and budget.
         </p>
-        <ul class="space-y-4">
+        <ul class="space-y-3 sm:space-y-4">
           {products.map((product) => (
             <li class="flex items-center gap-3">
               <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -27,11 +27,11 @@ const products = [
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
               </div>
-              <span class="text-lg text-gray-700">{product}</span>
+              <span class="text-base sm:text-lg text-gray-700">{product}</span>
             </li>
           ))}
         </ul>
-        <p class="mt-8 text-gray-500 text-sm">
+        <p class="mt-6 sm:mt-8 text-gray-500 text-sm">
           Not sure what you need? We'll help you find the right fit during your appointment.
         </p>
       </div>
