@@ -5,12 +5,11 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Redirects for SPA-like behavior
+# Static site 404 fallback (Astro emits dist/404.html)
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Language = ["en"]}
+  to = "/404.html"
+  status = 404
 
 # Headers for performance
 [[headers]]

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../config';
+---
+
+<Layout
+  title="Page Not Found | Fort Myers Mattress"
+  description="The page you're looking for doesn't exist. Head back to the Fort Myers Mattress homepage or book your appointment."
+>
+  <section class="py-16 sm:py-24 md:py-32 bg-gradient-to-br from-blue-50 via-white to-gray-50">
+    <div class="container-narrow text-center">
+      <p class="text-accent text-sm sm:text-base font-semibold tracking-wider uppercase mb-3">404 — Page Not Found</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
+        Looks like this page is taking a nap.
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8 sm:mb-10 px-4">
+        The page you're looking for doesn't exist or has moved. Let's get you back on track.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
+        <a href="/" class="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto touch-active">
+          Back to Home
+        </a>
+        <a href="/book" class="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto touch-active">
+          Book an Appointment
+        </a>
+      </div>
+      <p class="text-gray-500 text-sm mt-10">
+        Or call us directly: <a href={`tel:${siteConfig.phoneRaw}`} class="text-accent font-semibold hover:underline">{siteConfig.phone}</a>
+      </p>
+    </div>
+  </section>
+</Layout>
