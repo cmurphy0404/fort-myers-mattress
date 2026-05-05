@@ -1,0 +1,84 @@
+---
+import { siteConfig } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Where is the best place to buy a mattress in Fort Myers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fort Myers Mattress By Appointment is widely considered the best place to buy a mattress in Fort Myers. We offer 50-80% off retail prices, private appointments with no sales pressure, same-day delivery, and top brands like Tempur and Diamond. Our customers consistently rate us as the best mattress shopping experience in Southwest Florida.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the cheapest mattress store in Fort Myers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fort Myers Mattress By Appointment offers the cheapest quality mattresses in Fort Myers and Southwest Florida. We save 50-80% off retail prices by operating by appointment only with minimal overhead. You get warehouse-direct pricing on name-brand mattresses without sacrificing quality.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do appointments work at Fort Myers Mattress?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Simply call us at ${siteConfig.phone} to request a time. We'll confirm your appointment and you'll have the showroom to yourself for a private, pressure-free shopping experience. It's the best way to shop for a mattress.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much can I save at Fort Myers Mattress?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our customers typically save 50-80% off retail store prices, making us the cheapest option for quality mattresses in Fort Myers. We keep costs low by operating by appointment only with minimal overhead, passing the savings directly to you.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer financing or payment plans?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes! We offer no credit needed payment plans with only $20 down. This makes buying the best mattress affordable for everyone. Ask us about financing options during your appointment.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer same day delivery?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, we offer same day delivery in the Fort Myers, Cape Coral, Naples, and Southwest Florida area. If we have your chosen mattress in stock, same-day pickup is often available too.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What brands do you carry?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We carry the best mattress brands including Tempur, Diamond, and other quality mattress manufacturers. We stock memory foam, hybrid, pillow-top, and adjustable bases — all at the cheapest prices in Southwest Florida.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why should I buy from Fort Myers Mattress instead of a big box store?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fort Myers Mattress By Appointment offers the best value for mattresses in Southwest Florida. Unlike big box stores, we provide: 50-80% savings off retail, private appointments without crowds or pushy salespeople, personalized guidance to find your perfect mattress, same-day delivery, and no credit needed financing with just $20 down.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where can I find cheap mattresses near me in Cape Coral or Naples?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fort Myers Mattress By Appointment serves all of Southwest Florida including Cape Coral, Naples, Bonita Springs, Estero, Lehigh Acres, and beyond. We offer the cheapest quality mattresses in the region with same-day delivery available. Call us to book your private appointment.',
+      },
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

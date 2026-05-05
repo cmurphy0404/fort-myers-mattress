@@ -1,15 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CitySchema from '../components/CitySchema.astro';
 import { siteConfig } from '../config';
 
 const city = 'Lehigh Acres';
 const nearbyAreas = ['Fort Myers', 'Gateway', 'Buckingham', 'Alva'];
+const pageUrl = `${siteConfig.siteUrl}/lehigh-acres-mattress/`;
 ---
 
 <Layout
-  title={`Mattress Store ${city} FL | Save 50-80% | Free Delivery`}
-  description={`${city}'s best mattress deals - save 50-80% off retail! Private, no-pressure shopping by appointment. Same-day delivery to ${city}. Tempur, Diamond & more. Call (239) 200-6022!`}
+  title={`${city} Mattress Store | Save 50-80% | Same-Day Delivery`}
+  description={`${city}'s best mattress deals — save 50-80% off retail. Private, no-pressure shopping by appointment. Same-day delivery to ${city}. Tempur, Diamond & more. Call (239) 200-6022.`}
 >
+  <CitySchema slot="head" city={city} pageUrl={pageUrl} />
   <!-- Hero Section -->
   <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
     <div class="container-wide text-center">

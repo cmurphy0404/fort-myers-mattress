@@ -99,6 +99,7 @@ const { title, description, canonical, ogImage } = Astro.props;
 
     <SEO title={title} description={description} canonical={canonical} ogImage={ogImage} />
     <Schema />
+    <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col no-horizontal-scroll">
     <Header />

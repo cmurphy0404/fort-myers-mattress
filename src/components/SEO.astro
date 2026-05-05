@@ -16,47 +16,33 @@ const {
   ogImage = '/images/og-image.png',
   type = 'website',
 } = Astro.props;
-
-const fullTitle = `${title} | ${siteConfig.businessName}`;
 ---
 
-<!-- Primary Meta Tags -->
-<title>{fullTitle}</title>
-<meta name="title" content={fullTitle} />
+<title>{title}</title>
+<meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <link rel="canonical" href={canonical} />
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonical} />
-<meta property="og:title" content={fullTitle} />
+<meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(ogImage, siteConfig.siteUrl).href} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content={siteConfig.businessName} />
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content={canonical} />
-<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={new URL(ogImage, siteConfig.siteUrl).href} />
 
-<!-- Geo Tags for Local SEO -->
 <meta name="geo.region" content="US-FL" />
 <meta name="geo.placename" content="Fort Myers" />
 <meta name="geo.position" content="26.5838637;-81.8579749" />
 <meta name="ICBM" content="26.5838637, -81.8579749" />
 
-<!-- Local Business Keywords -->
-<meta name="keywords" content="best mattress store Fort Myers, cheapest mattresses Fort Myers, discount mattress Fort Myers FL, mattress by appointment, affordable mattress Cape Coral, best place to buy mattress Southwest Florida, cheap mattress near me Fort Myers, warehouse direct mattress prices, mattress deals Fort Myers, budget mattress Cape Coral, quality mattress low price, mattress store Naples FL, best mattress deals Lee County, discount mattress showroom, where to buy mattress Fort Myers, Tempur mattress Fort Myers, Diamond mattress dealer Florida" />
-
-<!-- Additional Local SEO -->
 <meta name="author" content={siteConfig.businessName} />
-<meta name="revisit-after" content="7 days" />
-<meta name="distribution" content="local" />
-<meta name="coverage" content="Southwest Florida" />
-<meta name="target" content="Fort Myers, Cape Coral, Naples, Bonita Springs, Estero, Lehigh Acres, Southwest Florida" />
-<meta name="subject" content="Best and cheapest mattress store in Fort Myers, Cape Coral, and Southwest Florida" />
-<meta name="summary" content="Fort Myers Mattress By Appointment offers the best mattress deals in Southwest Florida with 50-80% off retail prices. Private showroom, no pressure sales, same day delivery. Serving Fort Myers, Cape Coral, Naples, Bonita Springs, and surrounding areas." />
