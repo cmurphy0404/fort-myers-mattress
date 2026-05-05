@@ -105,8 +105,14 @@ const { title, description, canonical, ogImage } = Astro.props;
     <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col no-horizontal-scroll">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-accent focus:font-semibold focus:rounded-lg focus:shadow-lg focus:ring-2 focus:ring-accent"
+    >
+      Skip to main content
+    </a>
     <Header />
-    <main class="flex-1">
+    <main id="main" class="flex-1">
       <slot />
     </main>
     <Footer />

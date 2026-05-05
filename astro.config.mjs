@@ -20,6 +20,12 @@ export default defineConfig({
         } else if (url.includes('-mattress')) {
           item.priority = 0.8;
           item.changefreq = 'monthly';
+        } else if (url.endsWith('/blog/')) {
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
+        } else if (url.includes('/blog/')) {
+          item.priority = 0.7;
+          item.changefreq = 'monthly';
         } else if (url.includes('/about')) {
           item.priority = 0.7;
           item.changefreq = 'monthly';
