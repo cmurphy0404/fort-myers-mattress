@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://fortmyersmattress.com', // UPDATE: Replace with your actual domain
+  site: 'https://fortmyersmattressstore.com',
   integrations: [
     tailwind(),
     sitemap(),

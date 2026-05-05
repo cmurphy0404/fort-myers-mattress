@@ -10,7 +10,7 @@ export const siteConfig = {
   // Contact
   phone: '(239) 200-6022',
   phoneRaw: '+12392006022', // For tel: and sms: links
-  email: 'info@fortmyersmattress.com', // UPDATE: Add actual email
+  email: 'clearancemattressfortmyers@gmail.com',
 
   // Address
   address: {

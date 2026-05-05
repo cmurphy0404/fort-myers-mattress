@@ -50,19 +50,18 @@ const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 26.5975,
-    longitude: -81.871,
+    latitude: 26.5838637,
+    longitude: -81.8579749,
   },
   areaServed: [
-    // 75 mile radius GeoCircle
     {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: 26.5975,
-        longitude: -81.871,
+        latitude: 26.5838637,
+        longitude: -81.8579749,
       },
-      geoRadius: '120700', // 75 miles in meters
+      geoRadius: '120700',
     },
     // Named cities
     ...extendedAreaServed.map((area) => ({
