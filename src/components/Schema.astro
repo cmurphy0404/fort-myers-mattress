@@ -77,6 +77,21 @@ const localBusinessSchema = {
   logo: `${siteConfig.siteUrl}/images/MBA-MainHorizontalLogo-Red_Gray.png`,
   sameAs: socialLinks.length > 0 ? socialLinks : undefined,
   byAppointmentOnly: true,
+  foundingDate: '2014',
+  founder: [
+    {
+      '@type': 'Person',
+      name: 'Mike',
+      jobTitle: 'Co-Owner',
+      worksFor: { '@id': `${siteConfig.siteUrl}/#business` },
+    },
+    {
+      '@type': 'Person',
+      name: 'Karen',
+      jobTitle: 'Co-Owner',
+      worksFor: { '@id': `${siteConfig.siteUrl}/#business` },
+    },
+  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Mattresses and Sleep Products',

@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import FAQ from '../components/FAQ.astro';
 import FAQSchema from '../components/FAQSchema.astro';
+import ownersImage from '../assets/owners-mike-karen.jpg';
 import { siteConfig } from '../config';
 ---
 
@@ -116,31 +118,88 @@ import { siteConfig } from '../config';
   <section class="section-padding bg-white border-t border-gray-100">
     <div class="container-narrow">
       <div class="text-center mb-8 sm:mb-10">
+        <p class="text-accent text-xs sm:text-sm font-semibold tracking-wider uppercase mb-2">Family-Owned · Husband & Wife Team</p>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-          Family-Owned and Operated
+          Meet Mike &amp; Karen
         </h2>
         <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-          Fort Myers Mattress By Appointment isn't a franchise or a corporate showroom — it's a local family business serving Southwest Florida for over 10 years.
+          The owners you'll actually meet when you book your appointment.
         </p>
       </div>
 
-      <div class="max-w-3xl mx-auto bg-gray-50 rounded-2xl p-6 sm:p-8 md:p-10">
-        <div class="prose prose-base sm:prose-lg max-w-none text-gray-700">
-          <p class="mb-4">
-            We're part of the <strong>Mattress by Appointment</strong> nationwide network — locally owned showrooms that share warehouse-direct pricing across the country. Our showroom at 2950 Winkler Ave has been the trusted destination for Fort Myers, Cape Coral, Naples, Bonita Springs, Estero, and Lehigh Acres customers since 2014.
-          </p>
-          <p class="mb-4">
-            We carry only the brands we believe in — <strong>Tempur+Sealy, Diamond Mattress, Brooklyn Bedding, and Malouf</strong> — because a curated showroom serves customers better than a wall of generic options. Every mattress we sell, we've personally tested.
-          </p>
-          <p class="mb-0">
-            When you book an appointment, you're meeting the people who own this business — not a commissioned salesperson. We'll listen to what you need, recommend honestly, and you'll leave with a mattress at warehouse pricing or with no obligation if it's not the right fit.
-          </p>
+      <div class="grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-center max-w-5xl mx-auto">
+        <div class="order-1 md:order-1">
+          <Image
+            src={ownersImage}
+            alt="Mike and Karen, husband-and-wife owners of Fort Myers Mattress By Appointment"
+            class="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[4/5] md:aspect-[3/4]"
+            widths={[400, 600, 800]}
+            sizes="(min-width: 768px) 400px, 100vw"
+            format="webp"
+            quality={84}
+            loading="lazy"
+          />
+        </div>
+        <div class="order-2 md:order-2">
+          <div class="prose prose-base sm:prose-lg max-w-none text-gray-700">
+            <p class="mb-4">
+              For 10 years, we've been more than just a mattress store — we've been a part of the Fort Myers community. As a husband-and-wife team, we founded Fort Myers Mattress by Appointment with a simple mission: to provide a personal, stress-free shopping experience that helps our neighbors get the quality rest they deserve.
+            </p>
+            <p class="mb-0">
+              When you visit us at <strong>2950 Winkler Ave, Suite 601</strong>, you're working directly with the owners. Karen handles our digital marketing and keeps the community informed on the latest deals. Mike is often out personally managing deliveries to make sure your new bed arrives safely and on time.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="mt-8 text-center">
+      <div class="max-w-5xl mx-auto mt-10 sm:mt-12 md:mt-14">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">What Makes Us Different</h3>
+        <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+          <div class="bg-gray-50 rounded-xl p-5 sm:p-6">
+            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2 text-sm sm:text-base">A Decade of Local Expertise</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">Ten years mastering the mattress industry — we'll help you find the perfect fit for your sleep style and budget.</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-5 sm:p-6">
+            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Family Owned &amp; Operated</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">We've raised our four children here in Florida. We treat every person who walks through our door like a neighbor — never a sales goal.</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-5 sm:p-6">
+            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Service You Can Trust</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">From sponsoring local school programs to handling our own store maintenance, we're fully invested in the Fort Myers area.</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-5 sm:p-6">
+            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2 text-sm sm:text-base">A Personal Touch</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">Not a big-box chain. You get the honesty, care, and attention to detail that only a local family business can provide.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto mt-10 sm:mt-12 text-center">
+        <p class="text-base sm:text-lg text-gray-700 mb-6 italic">
+          "We believe a great day starts with a great night's sleep. Come see why Mike and Karen have been the trusted choice for mattresses in Fort Myers for over a decade."
+        </p>
         <a href={`tel:${siteConfig.phoneRaw}`} class="inline-flex items-center text-accent font-semibold text-base sm:text-lg hover:underline">
-          Talk to us directly: {siteConfig.phone}
+          Talk to Mike or Karen: {siteConfig.phone}
           <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
           </svg>
